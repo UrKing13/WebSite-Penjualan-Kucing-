@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Transaksi</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #FFA07A, #FF6347);
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+        }
+
+        .header, .footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #FF6347, #FF4500);
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .nav a {
+            text-decoration: none;
+            margin: 0 10px;
+            color: white;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            color: #090201;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #FF6347;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-group button:hover {
+            background-color: #FF4500;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Formulir Transaksi</h1>
+    </div>
+    <div class="nav">
+        <a href="index.html">Produk</a>
+        <a href="transaksi.html">Transaksi</a>
+        <a href="tentang.html">Tentang Kami</a>
+    </div>
+    <div class="content">
+        <div class="section">
+            <h2>Input Transaksi</h2>
+            <form id="transaksiForm">
+                <div class="form-group">
+                    <label for="nama">Nama:</label>
+                    <input type="text" id="nama" name="nama" required>
+                </div>
+                <div class="form-group">
+                    <label for="alamat">Alamat:</label>
+                    <textarea id="alamat" name="alamat" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="telepon">Telepon:</label>
+                    <input type="text" id="telepon" name="telepon" required>
+                </div>
+                <div class="form-group">
+                    <label for="produk">Produk:</label>
+                    <select id="produk" name="produk" required>
+                        <option value="Kucing Persia">Kucing Persia - Rp 3.000.000</option>
+                        <option value="Kucing Sphynx">Kucing Sphynx - Rp 5.000.000</option>
+                        <option value="Kucing Bengal">Kucing Bengal - Rp 4.000.000</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Penjualan Kucing Ras. Semua hak dilindungi.</p>
+    </div>
+    <script>
+        document.getElementById('transaksiForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nama = document.getElementById('nama').value;
+            const alamat = document.getElementById('alamat').value;
+            const telepon = document.getElementById('telepon').value;
+            const produk = document.getElementById('produk').value;
+
+            localStorage.setItem('nama', nama);
+            localStorage.setItem('alamat', alamat);
+            localStorage.setItem('telepon', telepon);
+            localStorage.setItem('produk', produk);
+
+            window.location.href = 'invoice.html';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penjualan Kucing Ras</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #FFA07A, #FF6347);
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+        }
+
+        .header, .footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #FF6347, #FF4500);
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .nav a {
+            text-decoration: none;
+            margin: 0 10px;
+            color: white;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            color: #090201;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .section p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .card {
+            display: inline-block;
+            text-align: left;
+            background-color: rgba(255, 255, 255, 0.669);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 400px;
+            margin: 20px;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            border-radius: 10px;
+            max-width: 100%;
+            height: 100px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 15px;
+        }
+
+        .highlight {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .highlight p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .highlight p strong {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Penjualan Kucing Ras</h1>
+        <marquee>Selamat Datang di Situs Penjualan Kucing Ras Terbaik!</marquee>
+    </div>
+    <div class="nav">
+        <a href="index.html">Produk</a>
+        <a href="transaksi.html">Transaksi</a>
+        <a href="tentang.html">Tentang Kami</a>
+    </div>
+    <div class="content">
+        <div class="section">
+            <h2>Produk Kami</h2>
+            <div class="card">
+                <img src="Gambar Kucing/KucingPersia.jpg" alt="Kucing Persia">
+                <h3>Kucing Persia 1</h3>
+                <p>Rp 3.000.000</p>
+                <button onclick="window.location.href='transaksi.html'">Beli/Pesan</button>
+            </div>
+            <div class="card">
+                <img src="Gambar Kucing/KucingSpynx.jpg" alt="Kucing Sphynx">
+                <h3>Kucing Sphynx 1</h3>
+                <p>Rp 5.000.000</p>
+                <button onclick="window.location.href='transaksi.html'">Beli/Pesan</button>
+            </div>
+            <div class="card">
+                <img src="Gambar Kucing/KucingBengal.jpg" alt="Kucing Bengal">
+                <h3>Kucing Bengal 1</h3>
+                <p>Rp 4.000.000</p>
+                <button onclick="window.location.href='transaksi.html'">Beli/Pesan</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Penjualan Kucing Ras. Semua hak dilindungi.</p>
+    </div>
+</body>
+</html>
